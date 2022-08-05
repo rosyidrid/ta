@@ -103,7 +103,14 @@ class Dashboard extends Component
             array_push($hasil, array($tgl => $tmp2));
         }
         $this->data_master = data_master::first();
-        
+        if ($this->data_master == null) {
+            data_master::create([
+                'total_order' => 0,
+                'stok_awn' => 0,
+                'stok_nambo' => 0,
+                'stok' => 0
+            ]);
+        }
         return view('livewire.dashboard', ['hasil' => $hasil])->with('data', $this->data_master);
     }
 }

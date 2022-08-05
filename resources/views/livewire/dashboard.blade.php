@@ -25,7 +25,7 @@
                     <!-- small box -->
                     <div class="small-box bg-primary">
                         <div class="inner">
-                            <h3>{{$data->total_order}}</h3>
+                            <h3>{{$data['total_order']}}</h3>
 
                             <p>Total Order</p>
                         </div>
